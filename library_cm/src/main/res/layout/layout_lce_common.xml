@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <lyh.library.cm.component.lce.view.SunLoadingView
+        android:id="@+id/sun_loading"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_load_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_lce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/empty" />
+
+        <TextView
+            android:id="@+id/tv_lce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_lce"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="加载为空"
+            android:textColor="#8a8a8a"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

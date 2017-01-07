@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <lyh.library.cm.component.ptr.PtrFrameLayout
+        android:id="@+id/ptr_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <lyh.library.cm.component.lce.LCELayout
+            android:id="@id/lcelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical" />
+        </lyh.library.cm.component.lce.LCELayout>
+
+    </lyh.library.cm.component.ptr.PtrFrameLayout>
+
+    <lyh.library.cm.widget.UiToolbar
+        android:id="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue"
+        android:minHeight="?attr/actionBarSize" />
+
+</RelativeLayout>

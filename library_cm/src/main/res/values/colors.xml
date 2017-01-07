@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <color name="black_p50">#7f000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGray">#7C7C7C</color>
+    <color name="colorTab">#CCCCCC</color>
+    <color name="window_background">#CCCCCC</color>
+
+</resources>

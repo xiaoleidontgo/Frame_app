@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Frame_app.iml" filepath="$PROJECT_DIR$/Frame_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Frame_main/Frame_main.iml" filepath="$PROJECT_DIR$/Frame_main/Frame_main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bilibili/bilibili.iml" filepath="$PROJECT_DIR$/bilibili/bilibili.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chart/chart.iml" filepath="$PROJECT_DIR$/chart/chart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library_autobahn/library_autobahn.iml" filepath="$PROJECT_DIR$/library_autobahn/library_autobahn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library_cm/library_cm.iml" filepath="$PROJECT_DIR$/library_cm/library_cm.iml" />
+    </modules>
+  </component>
+</project>

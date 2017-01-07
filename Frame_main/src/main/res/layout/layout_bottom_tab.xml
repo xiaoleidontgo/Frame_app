@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lyh.library.cm.component.tabbar.TabBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/tabbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/tabbar_height"
+    android:orientation="horizontal">
+
+    <lyh.library.cm.component.tabbar.view.ClassicTab
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:normal_icon="@mipmap/home_normal"
+        app:normal_title_color="@color/colorGray"
+        app:selected_icon="@mipmap/home_pressed"
+        app:selected_title_color="@color/colorPrimary"
+        app:title_text="主页" />
+
+    <lyh.library.cm.component.tabbar.view.ClassicTab
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:normal_icon="@mipmap/im_normal"
+        app:normal_title_color="@color/colorGray"
+        app:selected_icon="@mipmap/im_pressed"
+        app:selected_title_color="@color/colorPrimary"
+        app:title_text="信息" />
+
+    <lyh.library.cm.component.tabbar.view.RotateTab
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:normal_icon="@mipmap/find_normal"
+        app:normal_title_color="@color/colorGray"
+        app:selected_icon="@mipmap/find_pressed"
+        app:selected_title_color="@color/colorPrimary"
+        app:title_text="发现" />
+
+    <lyh.library.cm.component.tabbar.view.ClassicTab
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:normal_icon="@mipmap/photo_normal"
+        app:normal_title_color="@color/colorGray"
+        app:selected_icon="@mipmap/photo_pressed"
+        app:selected_title_color="@color/colorPrimary"
+        app:title_text="图片" />
+
+    <lyh.library.cm.component.tabbar.view.ClassicTab
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:normal_icon="@mipmap/me_normal"
+        app:normal_title_color="@color/colorGray"
+        app:selected_icon="@mipmap/me_pressed"
+        app:selected_title_color="@color/colorPrimary"
+        app:title_text="我" />
+</lyh.library.cm.component.tabbar.TabBarLayout>
+

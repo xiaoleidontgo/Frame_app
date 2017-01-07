@@ -1,0 +1,116 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.neenbedankt.android-apt'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+
+    allprojects {
+        repositories {
+            jcenter()
+        }
+    }
+
+    dependencies {
+        classpath 'me.tatarka:gradle-retrolambda:3.2.0'
+    }
+}
+
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+
+    defaultConfig {
+        applicationId "core.framework.dev"
+        minSdkVersion 21
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //65535的方法限制分包处理
+        dexOptions {
+            javaMaxHeapSize "4g"
+            jumboMode = true//忽略方法数限制的检查
+            //加快编译速度
+            incremental true
+        }
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+        lintOptions {
+            disable "InvalidPackage"
+            lintConfig file("lint.xml")
+        }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //导入dataBinding支持
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.0.0-alpha2'
+    compile 'com.android.support:palette-v7:24.0.0-alpha2'
+    compile 'com.android.support:support-v4:24.0.0-alpha2'
+    testCompile 'junit:junit:4.12'
+    //依赖Module
+    compile project(':library_cm')
+    //butterKnife
+    compile 'com.jakewharton:butterknife:8.2.1'
+    apt 'com.jakewharton:butterknife-compiler:8.2.1'
+    //leakCanary
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    //Gson
+    compile 'com.google.code.gson:gson:2.6.2'
+    //OkHttp3
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    //Retrofit2
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    //RxJava
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.1.6'
+    //RxLifecycle
+    compile 'com.trello:rxlifecycle-components:0.6.1'
+    //RxBinding
+    compile 'com.jakewharton.rxbinding:rxbinding:0.3.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-appcompat-v7:0.3.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-design:0.3.0'
+    //Glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //ijk
+    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.7.4'
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.7.4'
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.7.4'
+    compile 'tv.danmaku.ijk.media:ijkplayer-arm64:0.7.4'
+    compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.7.4'
+    compile 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.7.4'
+    compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.7.4'
+
+
+}

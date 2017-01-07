@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\myWorkspace\workspaceStudio\Frame_app\library_autobahn\src\main\assets"/><source path="D:\myWorkspace\workspaceStudio\Frame_app\library_autobahn\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\myWorkspace\workspaceStudio\Frame_app\library_autobahn\src\debug\assets"/></dataSet></merger>

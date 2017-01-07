@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lyh.library.cm.component.ptr.PtrFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ptr_framelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <lyh.library.cm.component.lce.LCELayout
+        android:id="@id/lcelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <lyh.library.cm.widget.PinHeaderLayout
+            android:id="@+id/pin_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical" />
+
+            <include layout="@layout/layout_item" />
+
+        </lyh.library.cm.widget.PinHeaderLayout>
+    </lyh.library.cm.component.lce.LCELayout>
+
+
+</lyh.library.cm.component.ptr.PtrFrameLayout>
+

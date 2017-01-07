@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            android:clickable="true">
+
+            <!--标题头-->
+            <LinearLayout
+                android:id="@+id/ll_user_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+
+                <lyh.library.cm.widget.CircleImageView
+                    android:id="@+id/iv_user_avatar"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="@dimen/dimen_5dp"
+                    android:layout_marginLeft="@dimen/dimen_8dp"
+                    android:src="@mipmap/empty" />
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_3dp"
+                    android:text="小雷放学别走"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/dimen_15sp" />
+
+            </LinearLayout>
+
+            <!--标题列表-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_collapseMode="pin">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@id/tablayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    app:tabIndicatorColor="@color/colorWhite"
+                    app:tabSelectedTextColor="@color/colorWhite"
+                    app:tabTextColor="@color/colorTab" />
+
+                <LinearLayout
+                    android:id="@+id/ll_drop_down"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/blue"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_drop_down"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginLeft="@dimen/dimen_3dp"
+                        android:layout_marginRight="@dimen/dimen_3dp"
+                        android:clickable="false"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/arrow_down_white" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <!--内容区-->
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <lyh.library.cm.widget.dropdown.DropDownLayout
+                android:id="@+id/drop_down_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="720dp" />
+
+            </lyh.library.cm.widget.dropdown.DropDownLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

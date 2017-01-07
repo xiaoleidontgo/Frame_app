@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lyh.library.cm.component.lce.LCELayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <lyh.library.cm.component.ptr.PtrFrameLayout
+            android:id="@+id/ptr_framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </lyh.library.cm.component.ptr.PtrFrameLayout>
+
+        <include layout="@layout/common_ui_toolbar" />
+
+    </RelativeLayout>
+</lyh.library.cm.component.lce.LCELayout>

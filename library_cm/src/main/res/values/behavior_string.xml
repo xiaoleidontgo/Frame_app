@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="behavior_gradient">lyh.library.cm.widget.behavior.SwipeGradientBehavior</string>
+    <string name="behavior_show_hide">lyh.library.cm.widget.behavior.SwipeShowHideBehavior</string>
+
+</resources>
