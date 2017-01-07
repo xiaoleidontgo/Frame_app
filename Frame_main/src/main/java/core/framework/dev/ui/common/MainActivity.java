@@ -135,6 +135,10 @@ public class MainActivity extends ActivityBase implements TabHandler {
             return false;
         }
 
+        if (tabItem != 0) {
+            return false;
+        }
+
         //是否登录，未登录则去登录
 //        if (tabItem == 4) {
 //            LoginActivity.launch(this);
